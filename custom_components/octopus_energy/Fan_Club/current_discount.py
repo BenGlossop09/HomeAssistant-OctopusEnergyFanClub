@@ -20,8 +20,8 @@ from ..coordinators.electricity_standing_charges import ElectricityStandingCharg
 
 _LOGGER = logging.getLogger(__name__)
 
-class OctopusEnergyElectricityCurrentStandingCharge(CoordinatorEntity, OctopusEnergyElectricitySensor, RestoreSensor):
-  """Sensor for displaying the current standing charge."""
+class OctopusEnergyElectricityCurrentFanClubDiscount(CoordinatorEntity, OctopusEnergyElectricitySensor, RestoreSensor):
+  """Sensor for displaying the current discount percentage."""
 
   def __init__(self, hass: HomeAssistant, coordinator, meter, point):
     """Init sensor."""
@@ -34,12 +34,12 @@ class OctopusEnergyElectricityCurrentStandingCharge(CoordinatorEntity, OctopusEn
   @property
   def unique_id(self):
     """The id of the sensor."""
-    return f'octopus_energy_electricity_{self._serial_number}_{self._mpan}{self._export_id_addition}_current_standing_charge'
+    return f'octopus_energy_electricity_{self._serial_number}_{self._mpan}{self._export_id_addition}_current_fan_club_discount'
     
   @property
   def name(self):
     """Name of the sensor."""
-    return f'Current Standing Charge {self._export_name_addition}Electricity ({self._serial_number}/{self._mpan})'
+    return f'Current Fan Club Discount {self._export_name_addition}Electricity ({self._serial_number}/{self._mpan})'
 
   @property
   def device_class(self):
