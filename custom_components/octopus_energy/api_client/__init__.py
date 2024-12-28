@@ -100,6 +100,16 @@ account_query = '''query {{
   }}
 }}'''
 
+fan_club_query = '''query {
+  fanClubStatus {
+    discountSource
+    current {
+      startAt
+      discount
+    }
+  }
+}'''
+
 live_consumption_query = '''query {{
 	smartMeterTelemetry(
     deviceId: "{device_id}"
