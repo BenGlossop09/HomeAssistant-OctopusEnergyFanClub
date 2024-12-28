@@ -44,7 +44,7 @@ class OctopusEnergyElectricityCurrentFanClubDiscount(CoordinatorEntity, OctopusE
   @property
   def device_class(self):
     """The type of sensor"""
-    return SensorDeviceClass.MONETARY
+    return SensorDeviceClass.BATTERY
 
   @property
   def icon(self):
@@ -54,7 +54,7 @@ class OctopusEnergyElectricityCurrentFanClubDiscount(CoordinatorEntity, OctopusE
   @property
   def native_unit_of_measurement(self):
     """Unit of measurement of the sensor."""
-    return "GBP"
+    return "%"
 
   @property
   def extra_state_attributes(self):
