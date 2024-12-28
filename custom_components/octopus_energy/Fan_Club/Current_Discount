@@ -1,4 +1,3 @@
-#Will Put Stuff Here
 import logging
 
 from homeassistant.const import (
